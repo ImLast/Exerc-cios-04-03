@@ -1,18 +1,14 @@
-using System;
-
 class Program
 {
     static void Main(string[] args)
     {
         double cotacaoDolar = 5.10;
 
-        Console.WriteLine("Digite o valor em dólar (USD):");
+        Console.WriteLine("Digite o valor em dólar:");
         double valorDolar = Convert.ToDouble(Console.ReadLine());
 
         double valorReais = valorDolar * cotacaoDolar;
 
-        Console.WriteLine("Valor em dólar: $" + valorDolar.ToString("F2"));
-        Console.WriteLine("Cotação do dólar: R$" + cotacaoDolar.ToString("F2"));
-        Console.WriteLine("Valor em reais: R$" + valorReais.ToString("F2"));
+        Console.WriteLine("Valor em reais: " + valorReais);
     }
 }
