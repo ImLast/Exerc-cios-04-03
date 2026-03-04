@@ -1,4 +1,5 @@
 using System;
+using System.Globalization;
 
 class Program
 {
@@ -11,8 +12,11 @@ class Program
 
         double valorReais = valorDolar * cotacaoDolar;
 
-        Console.WriteLine("Valor em dólar: $" + valorDolar.ToString("F2"));
-        Console.WriteLine("Cotação do dólar: R$" + cotacaoDolar.ToString("F2"));
-        Console.WriteLine("Valor em reais: R$" + valorReais.ToString("F2"));
+        CultureInfo culturaUS = new CultureInfo("en-US");
+        CultureInfo culturaBR = new CultureInfo("pt-BR");
+
+        Console.WriteLine("Valor em dólar: " + valorDolar.ToString("C", culturaUS));
+        Console.WriteLine("Cotação do dólar: " + cotacaoDolar.ToString("C", culturaBR));
+        Console.WriteLine("Valor em reais: " + valorReais.ToString("C", culturaBR));
     }
 }
